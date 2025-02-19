@@ -29,12 +29,13 @@ const generateMenu = () => {
     ];
 
     const list = document.createElement("ul");
-    
+    list.classList.add("menu-ul");
     for(let i = 0; i < NUM_MENU; i++){
         
         const tempNode = generateListItem(...menu[i]);
         list.appendChild(tempNode);
     }
+
 
     content.push(title);
     content.push(list);

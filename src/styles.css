@@ -83,7 +83,7 @@ header button:hover{
     gap: 0.5rem;
 }
 
-body div:last-child{
+body > div:last-child{
     
     width: 100%;
     padding: 0.5rem;
@@ -102,9 +102,17 @@ body div:last-child{
     
 }
 
-li{
+.menu-ul{
+    
+    display:flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.menu-ul li{
     padding: 1rem;
     border: 1px solid white;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
 }
@@ -113,4 +121,22 @@ img{
 
     max-height: 100%;
     max-width: 100%;
+}
+
+.contact-card{
+    
+    width: 70%;
+    border: 1px solid whitesmoke;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    
+}
+
+.contact-card p{
+    margin-left: 2rem;
+}
+
+.contact-card p:first-of-type{
+    
+    margin-top: 1rem;
 }
