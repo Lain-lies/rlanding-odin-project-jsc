@@ -1,5 +1,4 @@
 const NUM_DAYS_A_WEEK = 7;
-const contentContainer = document.querySelector("#content");
 const content = [];
 
 const generateHome = () => {

@@ -7,4 +7,4 @@ import {contactTest} from "./contact.js";
 
 const contentContainer = document.querySelector("#content");
 
-displayHome(contentContainer);
+// displayHome(contentContainer);
