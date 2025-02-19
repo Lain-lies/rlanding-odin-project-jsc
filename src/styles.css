@@ -83,16 +83,6 @@ header button:hover{
     gap: 0.5rem;
 }
 
-body > div:last-child{
-    
-    width: 100%;
-    padding: 0.5rem;
-    background-color: #222222;
-    color: white;
-    text-align: center;
-    
-
-}
 
 .image-container{
 

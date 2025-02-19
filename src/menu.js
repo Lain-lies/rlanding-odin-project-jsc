@@ -83,12 +83,21 @@ function appendChildren(parent, children){
 
 }
 
-function displayMenu(parent){
+function init(){
 
     generateMenu();
+}
+
+function displayMenu(parent){
+
     appendChildren(parent, content);
 
 }
 
+function getMenuContent(){
 
-export{displayMenu};
+    return content;
+}
+
+init();
+export{displayMenu, getMenuContent};

@@ -72,12 +72,21 @@ function appendChildren(parent, children){
 
 }
 
+function init(){
+    
+    generateContact();
+}
+
 function displayContact(parent){
 
-    generateContact();
     appendChildren(parent, content);
 
 }
 
+function getContactContent(){
 
-export{displayContact};    
+    return content;
+}
+
+init();
+export{displayContact, getContactContent};    

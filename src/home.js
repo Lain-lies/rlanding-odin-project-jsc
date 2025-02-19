@@ -48,12 +48,20 @@ function appendChildren(parent, children){
 
 }
 
+function init(){
+    
+    generateHome();
+}
 function displayHome(parent){
 
-    generateHome();
     appendChildren(parent, content);
 
 }
 
+function getHomeContent(){
 
-export{displayHome};
+    return content;
+}
+
+init();
+export{displayHome, getHomeContent};
