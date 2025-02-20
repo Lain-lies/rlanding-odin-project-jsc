@@ -68,12 +68,18 @@ header button:hover{
 
 .introduction{
     
-    width: 45ch;
+    width: 75ch;
 
 }
 
 .introduction h1{
     margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.introduction p{
+    
+    font-size: 1.2rem;
 }
 
 .schedule{
@@ -81,6 +87,7 @@ header button:hover{
     display: flex;
     flex-direction: column; 
     gap: 0.5rem;
+    font-size: 1.1rem;
 }
 
 

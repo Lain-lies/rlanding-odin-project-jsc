@@ -1,11 +1,11 @@
-const NUM_DAYS_A_WEEK = 7;
-const content = [];
+export const generateHome = () => {
 
-const generateHome = () => {
-    
+    const NUM_DAYS_A_WEEK = 7;
+    const content = [];
+
     const intro = document.createElement("div");
     const introChildren = [document.createElement("h1"), document.createElement("p"), document.createElement("p")];
-    introChildren[0].textContent = "The X Steak House";
+    introChildren[0].textContent = "The Elf Steak House";
     introChildren[1].textContent = "Step into a world of enchantment where the aroma of sizzling steaks fills the air. At Elf Steakhouse, we blend the finest cuts with age-old elven culinary traditions, crafting meals that delight the senses. Whether you seek a hearty feast or a mystical dining experience, our menu offers a taste of magic in every bite."
     introChildren[2].textContent = "Come dine with us and discover flavors worthy of legends!"
 
@@ -36,6 +36,8 @@ const generateHome = () => {
     content.push(intro);
     content.push(hourList);
 
+    return content;
+
 }
 
 function appendChildren(parent, children){
@@ -47,21 +49,3 @@ function appendChildren(parent, children){
     });
 
 }
-
-function init(){
-    
-    generateHome();
-}
-function displayHome(parent){
-
-    appendChildren(parent, content);
-
-}
-
-function getHomeContent(){
-
-    return content;
-}
-
-init();
-export{displayHome, getHomeContent};

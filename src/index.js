@@ -1,37 +1,45 @@
 import "./styles.css";
-import {displayHome, getHomeContent} from "./home.js";
-import {displayMenu, getMenuContent} from "./menu.js";
-import {displayContact, getContactContent} from "./contact.js";
+import {generateHome} from "./home.js";
+import {generateMenu} from "./menu.js";
+import {generateContact} from "./contact.js";
 
-const contentContainer = document.querySelector("#content");
-let currentlyShownContent = getHomeContent();
-displayHome(contentContainer);
+function init(){
 
-const imports = [
-
-    {display : displayHome, content : getHomeContent},
-    {display : displayMenu, content : getMenuContent} ,
-    {display : displayContact, content: getContactContent}
-
-]
-
-const buttons = document.querySelectorAll("nav > *");
-
-for(let i = 0; i < buttons.length; i++){
+    const pageContent = [generateHome(), generateMenu(), generateContact()];
+    const contentContainer = document.querySelector("#content");
+    const buttons = document.querySelectorAll("nav > *");
     
-    buttons[i].addEventListener("click", () => {
+    let currentlyShownContent = pageContent[0];
+    appendAll(contentContainer, currentlyShownContent);
+
+    for(let i = 0; i < buttons.length; i++){
         
-        currentlyShownContent.forEach(element => {
+        buttons[i].addEventListener("click", () => {
             
-            contentContainer.removeChild(element);
+            removeAll(contentContainer, currentlyShownContent); 
+            currentlyShownContent = pageContent[i];
+            appendAll(contentContainer, currentlyShownContent);
+
         });
+    }
 
-        imports[i].display(contentContainer);
-        
-        currentlyShownContent = imports[i].content();
-
-    });
 }
 
+function appendAll(parent, children){
+    
+    children.forEach(element => {
+        
+        parent.appendChild(element);
+    });
 
+}
 
+function removeAll(parent, children){
+
+    children.forEach(element => {
+        
+        parent.removeChild(element);
+    })
+    
+}
+init();

@@ -1,8 +1,8 @@
-const content = [];
-const NUM_MENU = 3;
+export const generateMenu = () => {
 
-const generateMenu = () => {
-
+    const content = [];
+    const NUM_MENU = 3;
+    
     const title = document.createElement("h1");
     title.textContent = "Menu";
 
@@ -39,6 +39,8 @@ const generateMenu = () => {
 
     content.push(title);
     content.push(list);
+
+    return content;
 
 }
 
@@ -82,22 +84,3 @@ function appendChildren(parent, children){
     });
 
 }
-
-function init(){
-
-    generateMenu();
-}
-
-function displayMenu(parent){
-
-    appendChildren(parent, content);
-
-}
-
-function getMenuContent(){
-
-    return content;
-}
-
-init();
-export{displayMenu, getMenuContent};

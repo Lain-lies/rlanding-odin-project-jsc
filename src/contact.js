@@ -1,8 +1,8 @@
-const content = [];
-const NUM_CONTACT = 3;
+export const generateContact = () => {
 
-const generateContact = () => {
-    
+    const content = [];
+    const NUM_CONTACT = 3;
+
     const title = document.createElement("h1");
     title.textContent = "Contacts";
     content.push(title);
@@ -33,8 +33,8 @@ const generateContact = () => {
         content.push(contacts[i]);
 
     }
-    
-   
+
+    return content;
     
 }
 
@@ -71,22 +71,3 @@ function appendChildren(parent, children){
     });
 
 }
-
-function init(){
-    
-    generateContact();
-}
-
-function displayContact(parent){
-
-    appendChildren(parent, content);
-
-}
-
-function getContactContent(){
-
-    return content;
-}
-
-init();
-export{displayContact, getContactContent};    
